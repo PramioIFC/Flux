@@ -1,0 +1,14 @@
+# Credenciais locais (nunca enviar tokens ao Git)
+.env
+config.json
+
+# Arquivos gerados pelo Flutter/Dart
+.dart_tool/
+build/
+.flutter-plugins-dependencies
+.tmp-appdata/
+android/.kotlin/
+
+# Python
+__pycache__/
+*.pyc
