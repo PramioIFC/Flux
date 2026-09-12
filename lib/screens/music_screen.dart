@@ -34,18 +34,20 @@ class MusicScreen extends StatelessWidget {
       body: SafeArea(child: Padding(
         padding: const EdgeInsets.all(28),
         child: Column(children: [
-          const Spacer(),
-          Container(
-            width: double.infinity,
-            constraints: const BoxConstraints(maxWidth: 360, maxHeight: 360),
-            decoration: BoxDecoration(
-              color: FluxApp.cardColor,
-              borderRadius: BorderRadius.circular(24),
-              gradient: const LinearGradient(colors: [Color(0xFF0F766E), Color(0xFF1E1E2E)]),
+          Expanded(
+            child: Center(
+              child: Container(
+                width: double.infinity,
+                constraints: const BoxConstraints(maxWidth: 360, maxHeight: 360),
+                decoration: BoxDecoration(
+                  color: FluxApp.cardColor,
+                  borderRadius: BorderRadius.circular(24),
+                  gradient: const LinearGradient(colors: [Color(0xFF0F766E), Color(0xFF1E1E2E)]),
+                ),
+                child: const AspectRatio(aspectRatio: 1, child: Icon(Icons.music_note, size: 120, color: FluxApp.accentColor)),
+              ),
             ),
-            child: const AspectRatio(aspectRatio: 1, child: Icon(Icons.music_note, size: 120, color: FluxApp.accentColor)),
           ),
-          const Spacer(),
           Row(children: [
             Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(track['track_name']!, style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
